@@ -1,7 +1,5 @@
-from icalendar import Calendar, Event, Alarm
+from icalendar import Calendar, Event
 from datetime import *
-from dateutil.rrule import rrule, WEEKLY
-
 
 def generate_classes(data):
     classes = set()
@@ -85,7 +83,7 @@ if __name__ == "__main__":
     import sys
     import csv
     input_file = sys.argv[1]
-    with open("TimeTable.csv", 'r') as file:
+    with open(input_file, 'r') as file:
         csvfile = csv.reader(file)
         data = []
         for row in csvfile:
